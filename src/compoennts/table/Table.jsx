@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Column } from 'react-virtualized';
+import { Table, Column, AutoSizer} from 'react-virtualized';
 import "react-virtualized/styles.css";
 
 const cellInput = (props, handleChangeInput) => {
@@ -59,8 +59,7 @@ const TableComponent = ({ data }) => {
   return (
     <div
       style={{
-        display: "flex",
-        justifyContent: "center",
+        overflowX: 'auto'
       }}
     >
         <Table
